@@ -14245,6 +14245,20 @@ test_{network} = bottleneck_features['test']</code></pre>
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>After apply the convolutional and pooling layers on the raw images, we get the so called bottleneck features.
+Then we use GlobalAveragePooling2D to reduce the dimension. 
+The two dense layers are appplied as a MLP.
+In the end a dense layer with 133 nodes is adopted with softmax activation function to create the likeihood of each breed.</p>
+<p>Since, we use the features created by VGC16, we don't need to use convolutional and pooling layers now. We only need a couple of dense layers to process the features.</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[31]:</div>
